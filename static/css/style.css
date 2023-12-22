@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header {
+    height: 60px;
+    background-color: #000;
+}
+
+.header-nav {
+    background-color: #000;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-nav .welcome-message {
+    color: #fff;
+    margin-right: auto;
+    margin-left: 10px; 
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+
+nav {
+    margin-right: 5%;
+}
+
+a {
+    color: #fff;
+    text-decoration-line: none;
+}
+
+
+a:hover {
+    color: #f00;
+}
+/* header end */
+
+
+/* first block */
+#first-block {
+    background-image: url("../image/story.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container h1 {
+    text-align: center;
+    color: rgb(17, 0, 252);
+}
+
+h1 {
+    font-size: 80px;
+    font-family: serif;
+    color: #444;
+}
+
+h3 {
+    font-size: 50px;
+    font-family: serif;
+    color: #444;
+}
+/* first block end */
+
+
+/* second block */
+#second-block {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.info-title {
+    font-size: 60px;
+    font-family: serif;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+}
+/* second block end */
+
+/* third-block */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-container img {
+    width: 280px;
+    margin: 10px;
+}
+
+/* third-block end */
+
+#to-genrate a {
+    font-size: 50px; 
+    color: black; 
+    text-decoration: none; 
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+#to-genrate a:hover {
+    text-decoration: underline; 
+}
+
+
+/* footer  */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    background-color: #000;
+    font-size: 15px;
+    color: #fff;
+}
+/* footer end */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+h2 {
+    color: #333;
+    margin: 20px 0;
+}
+
+.back-to-top {
+    color: #000;
+}
+
+/* responsive design */
+@media screen and (max-width: 768px) {
+    /* ヘッダー */
+    .header-nav {
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+
+    /* title-size */
+    h1 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    /* first-block */
+    #first-block {
+        height: 400px;
+    }
+
+    /* second-block */
+    #second-block {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .info-title {
+        font-size: 40px;
+    }
+
+    /* third-block */
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    /* footer */
+    footer {
+        height: 60px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* title-size */
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    /* second */
+    .info-title {
+        font-size: 30px;
+    }
+
+    /* footer */
+    footer {
+        font-size: 12px;
+    }
+}
+
+
+/* help page specific styles */
+/* help page header */
+.help-header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+/* help page content */
+.help-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* help page lists */
+.help-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* help page list items */
+.help-content li {
+    margin-bottom: 10px;
+}
+
+/* help page footer */
+.help-footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* responsive design for help page */
+@media screen and (max-width: 768px) {
+    .help-content {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .help-content {
+        margin: 5px;
+        padding: 5px;
+    }
+}

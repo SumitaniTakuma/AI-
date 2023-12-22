@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>generate_result</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+    <h1>画像アップロード</h1>
+
+    <form action="/generate" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image_files" accept="image/*" multiple>
+        <input type="number" name="tokens" placeholder="トークン数（デフォルト:150）" min="1" max="500">
+        <input type="submit", value="画像を送信">
+    </form>
+
+    {% if img_data %}
+        <h2>アップロードされた画像</h2>
+        {% for item in img_data %}
+            <img src="{{ url_for('static', filename=item.path) }}" alt="アップロードされた画像" style="max-width: 100%; height: auto;">
+            <p>{{ item.caption }}</p>
+        {% endfor %}
+    {% endif %}
+
+    {% if story %}
+        <h2>生成したストーリー</h2>
+        <p>{{ story }}</p>
+    {% endif %}
+
+    <h3>
+        <a href="/" class="back-to-top">トップページへ戻る</a>
+    </h3>
+
+</body>
+
+</html>
