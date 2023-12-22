@@ -2,7 +2,7 @@
 import openai
 
 def generate_story(keywords, max_tokens=150):
-    openai.api_key = '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'  # あなたのAPIキーを設定
+    openai.api_key = 'your API Key'  # あなたのAPIキーを設定
 
     prompt = f"Create a story based on these keywords: {', '.join(keywords)}."
 
