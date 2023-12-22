@@ -3,7 +3,8 @@ flask==2.2.2
 requests==2.31.0
 werkzeug==2.2.3
 transformers==4.35.2
-torch==2.1.1
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==2.1.1+cpu
 Pillow==9.4.0
 openai==0.28.0
 numpy==1.23.5
