@@ -1,8 +1,11 @@
 # GPT モデルによる小説の生成モデル
 import openai
+import os
+
+api_key = os.environ.get('GPT_API_KEY')
 
 def generate_story(keywords, max_tokens=150):
-    openai.api_key = 'your API Key'  # あなたのAPIキーを設定
+    openai.api_key = api_key  # あなたのAPIキーを設定
 
     prompt = f"Create a story based on these keywords: {', '.join(keywords)}."
 
